@@ -24,6 +24,9 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    String? imageUrl;
+    String facts =
+        'Click on the button and get a fact about the cat and a picture';
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -35,30 +38,38 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
       ),
       body: Center(
-        
+        child: Padding(
+        padding:EdgeInsets.only( top: 400),
+         child: Text(
+          facts,
+          textAlign: TextAlign.center,
+          style: TextStyle(fontFamily: 'Playwrite', fontSize: 20, color: Colors.black, height: 1.3,
+           ),
+        ), 
+        ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.all(100),
+        padding: EdgeInsets.only(bottom: 50, left: 100,right: 100),
         child: SizedBox(
           width: 200,
           height: 50,
           child: OutlinedButton(
-          onPressed: () {
-            print('Нажата OutlinedButton');
-          },
-          style: OutlinedButton.styleFrom(
-            backgroundColor: Color.fromARGB(255, 243, 170, 194),
-            side: const BorderSide(color: Colors.black, width: 1),
-          ),
-          child: const Text(
-            'Get a cat',
-            style: TextStyle(
-              fontFamily: 'Playwrite',
-              fontSize: 15,
-              color: Colors.black,
+            onPressed: () {
+              print('Нажата OutlinedButton');
+            },
+            style: OutlinedButton.styleFrom(
+              backgroundColor: Color.fromARGB(255, 243, 170, 194),
+              side: const BorderSide(color: Colors.black, width: 1),
+            ),
+            child: const Text(
+              'Get a cat',
+              style: TextStyle(
+                fontFamily: 'Playwrite',
+                fontSize: 15,
+                color: Colors.black,
+              ),
             ),
           ),
-          )
         ),
       ),
     );
