@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String? _facts = 'After clicking on the button you will receive a fact and a picture of the cat';
   bool loading = false;
 
-  // Метод для загрузки картинки
+  // Метод для загрузки картинки и текста
   Future<void> resourceExtraction() async {
     setState(() {
       loading = true;
